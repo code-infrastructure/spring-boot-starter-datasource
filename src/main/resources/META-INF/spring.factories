@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.faner.infrastructure.datasource.autoconfigure.DruidFilterConfiguration,\
+  com.faner.infrastructure.datasource.autoconfigure.DataSourcePoolConfiguration,\
+  com.faner.infrastructure.datasource.autoconfigure.DataSourceRuleConfiguration,\
+  com.faner.infrastructure.datasource.autoconfigure.DataSourceConfiguration,\
+  com.faner.infrastructure.datasource.autoconfigure.DruidDataSourceMetricsConfiguration

@@ -1,0 +1,29 @@
+#-------------------------------------------------------
+# 服务全局配置文件
+#-------------------------------------------------------
+# 重要说明
+# 所有环境均使用此区域的配置。外部资源如数据库连接等可配置为开发
+# 环境使用的值，测试环境、预发布环境、线上环境请务必通过Apollo
+# 配置中心进行配置，切勿在此文件中定义
+#-------------------------------------------------------
+datasource:
+  pool:
+    master:
+      url: jdbc:mysql://127.0.0.1:3306/shell_circle?connectTimeout=1000&socketTimeout=60000&useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: root
+    slave:
+      url: jdbc:mysql://127.0.0.1:3306/shell_circle?connectTimeout=1000&socketTimeout=60000&useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: root
+  rules:
+    ms1:
+      master-slave-rule:
+        master-data-source-name: master
+        name: ms_ds
+        slave-data-source-names: slave # 可以指定多个slave0,slave1
+      props:
+        sql:
+          show: true
+
+
